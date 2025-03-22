@@ -19,15 +19,40 @@
           <p class="header__subtitle">Депутат</p>
         </div>
       </header>
-  
+
       <main class="main">
+        <section class="theme">
+          <button class="theme__toggle" id="theme-toggle">Сменить тему</button>
+        </section>
         <section class="about">
           <h2 class="about__title">Обо мне</h2>
           <p class="about__text">
-            Привет! Меня зовут Иван, я живу в Самаре, создаю лендинги и иллюстрации на заказ. С детства люблю комиксы и стараюсь добавлять мелкий растр в дизайн, чтобы сделать его более ламповым. После работы учусь играть на басу и подумываю присоединиться к группе для бодрящих выступлений со сцены. Черкните мне пару строк, если ищете дизайнера для своего нового проекта или хотите просто уютно пообщаться.
+            Привет! Меня зовут Иван, я живу в Самаре, создаю лендинги и
+            иллюстрации на заказ. <br />С детства люблю комиксы и стараюсь
+            добавлять мелкий растр в дизайн, чтобы сделать его более ламповым.
+            <br />
+            После работы учусь играть на басу и подумываю присоединиться к
+            группе для бодрящих выступлений со сцены. <br />
+            Черкните мне пару строк, если ищете дизайнера для своего нового
+            проекта или хотите просто уютно пообщаться.
           </p>
         </section>
-  
+        <section class="education">
+          <h2 class="education__title">Обучение</h2>
+          <div class="education__item">
+            <h3 class="education__institution">
+              Самарский национальный исследовательский университет имени
+              академика С.П. Королёва
+            </h3>
+            <p class="education__degree">Бакалавр информационных технологий</p>
+            <p class="education__duration">2018 - 2022</p>
+            <p class="education__description">
+              Изучал программирование, веб-разработку, базы данных и управление
+              проектами. Участвовал в хакатонах и разрабатывал проекты для
+              университета.
+            </p>
+          </div>
+        </section>
         <section class="interests">
           <h2 class="interests__title">Мои интересы</h2>
           <ul class="interests__list">
@@ -37,15 +62,14 @@
             <li class="interests__item">Фотография</li>
           </ul>
         </section>
-  
+
         <section class="contact">
-           <h2 class="contact__title">Связь</h2>
-           <ul class="contact__list">
+          <h2 class="contact__title">Связь</h2>
+          <ul class="contact__list">
             <li class="contact__item"><a href="#">+79310310281</a></li>
             <li class="contact__item"><a href="#">Telegram</a></li>
             <li class="contact__item"><a href="#">Whatsapp</a></li>
             <li class="contact__item"><a href="#">Facebook</a></li>
-  
           </ul>
         </section>
       </main>
@@ -54,5 +78,18 @@
     <footer class="footer">
       <p class="footer__text">© 2025</p>
     </footer>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        if (body.getAttribute("data-theme") === "dark") {
+          body.removeAttribute("data-theme");
+        } else {
+          body.setAttribute("data-theme", "dark");
+        }
+      });
+    </script>
   </body>
 </html>
